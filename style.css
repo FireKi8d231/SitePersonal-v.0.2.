@@ -1,0 +1,119 @@
+body{
+	margin: 0;
+	overflow: hidden;
+	background-color: #9ee8ff;
+}
+.curved{
+	background: #0a68ff;
+	color: white;
+	text-align: center;
+}
+.curved h1{
+	font-size: 6rem;
+	font-family: Consolas, monaco, monospace;
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+}
+.curved p{
+	font-size: 2rem;
+	font-family: Consolas, monaco, monospace;
+	margin: 1rem 5rem 2rem 5rem;
+	color: #d1d1d1;
+}
+.curved svg{
+	display: block;
+}
+.btn{
+	padding: 1vh;
+	text-decoration: none;
+	color: white;
+	font-size: 1rem;
+	font-family: Arial;
+	font-weight: bold;
+	border-radius: 100px;
+	background: #0099ff;
+	padding: 1vh 4vh;
+	border: none;
+	outline: none;
+	box-shadow: 0 7px #005a94;
+}
+.btn:hover{background-color: #0076c4;}
+.btn:active{
+	background-color: #0076c4;
+	box-shadow: 0 3px #004470;
+	transform: translateY(4px);
+}
+.curved.upper{
+	background: #9ee8ff;
+	position: relative;
+}
+.div.txtarea {
+	position: absolute;
+
+}
+/* Teme.html aici */
+.container{
+	display: inline-block;
+	margin: 5% 15%;
+	border-radius: 25px;
+	background: #fff;
+	width: 70%;
+	height: 90%;
+}
+.container h3{
+	margin: 2% 40%;
+	padding: 1px 10px;
+	font-size: 4rem;
+	text-decoration: underline;
+	font-weight: bold;
+	font-family: Consolas, monaco, monospace;
+}
+.container h2{
+	text-align: center;
+	margin-top: 2%;
+	font-size: 3rem;
+	text-decoration: underline;
+	font-weight: bold;
+	font-family: Consolas, monaco, monospace;
+}
+.container h1{
+	margin-left: 2%;
+	margin-bottom: 0.5%;
+	font-size: 1.3rem;
+	font-weight: bold;
+	font-family: Consolas, monaco, monospace;
+}
+.tema{
+	cursor: pointer;
+	margin: 2% 4%;
+	padding: 1px 10px;
+	border: 3px solid black;
+	border-radius: 15px;
+	font-size: 2.5rem;
+	font-weight: bold;
+	font-family: Consolas, monaco, monospace;
+}
+.container a{
+	text-decoration: none;
+	color: blue;
+}
+.container p{
+	margin-left: 2%;
+	margin-bottom: 0.5%;
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: Consolas, monaco, monospace;
+}
+.cod{
+	border: 2px solid black;
+	border-radius: 5px;
+	padding-left: 0.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 4%;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.bod{
+	overflow: scroll;
+}

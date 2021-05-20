@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<!-- --------------------------------- -->
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="..\style.css">
+	<link rel="icon" href="#">
+	<title>Teme</title>
+  </head>
+<!-- --------------------------------- -->
+
+<!-- --------------------------------- -->
+  <body class="bod">
+    <div class="container">
+      <!-- START TEORIE -->
+      <h2>Teorie Matrici</h2>
+      <h1>
+        <span style="color: green; font-size: 2rem;">Definitie:</span><br>
+        Matricea sau tabloul bidimensional, este un tablou cu elemente de acelati tip, dispuse pe linii si coloane.<br>
+        Fiecare element al matricii se afla pe o anumita linie si pe o anumita coloana.<br><br>
+
+        <span style="color: green; font-size: 2rem;">Declararea:</span><br>
+        Matricea se declara folosind comanda: <span style="color: blue;">tip nume_matrice[numar_max_linii][nr_max_col];</span>.<br>
+        Exemplu: <span style="color: blue;">int a[2][3]</span> - aceasta este o matrice cu 2 linii si 3 coloane, iar elementele din matrice<br>
+        vor fi numai de tipul int.<br><br>
+
+        <span style="color: green; font-size: 2rem;">Exemplu:</span><br>
+
+        int a[4][3];<br>
+        Matricea de mai jos are 4 linii si 3 coloane.<br><br>
+
+        1 3 9<br>
+        2 5 0<br>
+        8 9 2<br>
+        4 6 7<br><br>
+
+        <span style="color: green; font-size: 2rem;">Parcurgerea unei matrici:</span><br>
+        Pentru a parcurge o matrice ai nevoie de 2 for-uri, pentru a parcurge de pe fiecare linie, fiecare coloana:<br>
+      </h1>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span>
+<span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> a<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// matrice cu maxim 100 linii si maxim 100 coloane</span>
+    
+    <span style="color:#0000ff; font-weight:bold; ">int</span> n <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">10</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// numarul de linii ale matricii noastre</span>
+    
+    <span style="color:#0000ff; font-weight:bold; ">int</span> m <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">10</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// numarul de coloane ale matricii noastrea</span>
+    
+    <span style="color:#0000ff; font-weight:bold; ">for</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span>i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">{</span> <span style="color:#008000; ">// mergem pe fiecare linie</span>
+    
+        <span style="color:#0000ff; font-weight:bold; ">for</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span>j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">{</span> <span style="color:#008000; ">// mergem pe fiecare coloana de pe linia i</span>
+        
+            <span style="color:#008000; ">// instructiunea pt fiecare caseta din matrice</span>
+            <span style="color:#008000; ">// poti da cin &gt;&gt; a[i][j] ca sa-i dai o valoare lui a[i][j];</span>
+            <span style="color:#008000; ">// poti da cout &lt;&lt; a[i][j]</span>
+            <span style="color:#008000; ">// sau orice altceva</span>
+            
+        <span style="color:#0000ff; ">}</span>
+        
+    <span style="color:#0000ff; ">}</span>
+    
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+      <h1>
+        <span style="color: green; font-size: 2rem;">Diagonalele in matrice:</span><br>
+        In primul rand, ca sa vorbim despre diagonalele unei matrici, avem nevoie de o matrice patratica, adica numarul de linii 
+        este egal cu numarul de coloane, deoarece numai in matrici patratice putem avea diagonale.<br><br>
+
+        Exemple de matrici patratice:<br><br>
+
+        n = 2<br>
+        1 7<br>
+        3 5<br><br>
+
+        n = 5<br>
+        1 7 2 0 1<br>
+        8 2 3 9 6<br>
+        1 8 5 3 0<br>
+        3 9 3 1 7<br>
+        4 9 4 1 3<br><br>
+
+        Pentru a parcurge diagonala principala, adica din stanga sus pana jos dreapta, avem nevoie de un singur for, 
+        si il vom prelucra pe A[i][i].<br>
+        <img src="..\images\1diag.gif" style="width: 30vh"><br>
+        Mai jos este un exemplu de cod care citeste o matrice cu 10 linii si coloane si afiseaza elementele de pe diagonala principala.
+      </h1>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span>
+<span style="color:#0000ff; ">{</span>
+  <span style="color:#0000ff; font-weight:bold; ">int</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// declaram matricea cu maxim 100 linii si coloane</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">int</span> n <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">10</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// matricea va avea 10 linii si 10 coloane</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// citim matricea</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#008000; ">// parcurgem toata matricea pe diagonala</span>
+  <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#000080; ">' '</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// afisam elementele de pe diagonala</span>
+  <span style="color:#0000ff; ">}</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+      <h1>
+        Pentru a parcurge o matrice pe diagonala secundara, adica din stanga jos spre dreapta sus, avem nevoie 
+        tot de un singur for, doar ca de data asta mergem de la <span style="color: blue;">i = 1</span> la <span style="color: blue;">1</span>, adica invers, si il vom prelucra pe <span style="color: blue;">A[i][n+1-i]</span>.<br>
+        <img src="..\images\2diag.gif" style="width: 30vh"><br><br>
+
+        Folosim <span style="color: blue;">n + 1 - i</span> deoarece, daca de exemplu vrem sa afisam primul element de pe diagonala secundara a unei matrici cu 5 linii si coloane 
+        vom afisa pe <span style="color: blue;">A[5][1]</span>, de unde <span style="color: blue;">1 = 5 + 1 - 5</span>; daca vrem sa afisam pe al doilea element de pe diagonala vom afisa pe <span style="color: blue;">A[4][2]</span>, de unde 
+        <span style="color: blue;">2 = 5 + 1 - 4</span>, adica <span style="color: blue;">n + 1 - i</span>;<br><br>
+
+        <img src="..\images\2diag2.png" style="width: 25vh"><br><br>
+
+        Mai jos este un exemplu de cod care citeste o matrice de 10 linii si coloane si va afisa toate elementele de pe diagonala secundara.
+      </h1>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span>
+<span style="color:#0000ff; ">{</span>
+  <span style="color:#0000ff; font-weight:bold; ">int</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// declaram matricea cu maxim 100 linii si coloane</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">int</span> n <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">10</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// matricea va avea 10 linii si 10 coloane</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// citim matricea</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">-</span><span style="color:#0000ff; ">-</span><span style="color:#0000ff; ">)</span> <span style="color:#008000; ">// parcurgem toata matricea pe diagonala</span>
+  <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>n<span style="color:#0000ff; ">+</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">-</span>i<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#000080; ">' '</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// afisam elementele de pe diagonala secundara</span>
+  <span style="color:#0000ff; ">}</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+      <!-- START PROBLEME -->
+      <h2>Probleme Matrici</h2>
+      <p>Problema #767 <a href="https://www.pbinfo.ro/probleme/767/sumapare2" target="_blank">SumaPare2</a></p>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> n<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> m<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> m<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">int</span> suma <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+            <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+            <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">%</span> <span style="color:#800000; ">2</span> <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">)</span> suma <span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">=</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// daca nr este par il punem la suma</span>
+        <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> suma<span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// afisam suma finala</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+<!-- ------------------------------------------------------------------------------ -->
+      <p>Problema #658 <a href="https://www.pbinfo.ro/probleme/658/sumalinii" target="_blank">SumaLinii</a></p>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> n<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> m<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> m<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">int</span> suma<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+        suma <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// declaram suma = 0 ca sa facem suma pe fiecare linie</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+            <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+            <span style="color:#008000; ">// de fiecare data cand citim un nr, il pune la suma</span>
+            suma <span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">=</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+        <span style="color:#0000ff; ">}</span>
+        <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> suma <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#000080; ">' '</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// afisam suma de pe linia i</span>
+    <span style="color:#0000ff; ">}</span>
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre>
+</div>
+<!-- ------------------------------------------------------------------------------ -->
+      <p>Problema #659 <a href="https://www.pbinfo.ro/probleme/659/sumalinii1" target="_blank">SumaLinii1</a></p>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> n<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> m<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> m<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#008000; ">// ca sa obtinem cea mai mica valoare adunand elementele cu</span>
+    <span style="color:#008000; ">// exceptia unuia, facem suma liniei - cel mai mare numar de pe linie</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> suma<span style="color:#0000ff; ">,</span> maxi<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+            <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+        maxi <span style="color:#0000ff; ">=</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+        suma <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+            <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>maxi <span style="color:#0000ff; ">&lt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">)</span> maxi <span style="color:#0000ff; ">=</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// aflam cel mai mare nr</span>
+            suma <span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">=</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// facem suma liniei</span>
+        <span style="color:#0000ff; ">}</span>
+        <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> suma <span style="color:#0000ff; ">-</span> maxi <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#000080; ">' '</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// afisam cea mai mica valoare de pe linia i</span>
+    <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+<!-- ------------------------------------------------------------------------------ -->
+      <p>Problema #666 <a href="https://www.pbinfo.ro/probleme/666/nrprime" target="_blank">NrPrime</a></p>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#008000; ">// functie pentru a afla daca un nr este prim</span>
+<span style="color:#008000; ">// daca prim(numar) == 0 , nu este prim</span>
+<span style="color:#008000; ">// daca prim(numar) == 1 , este prim</span>
+<span style="color:#0000ff; font-weight:bold; ">int</span> prim<span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> a<span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>a <span style="color:#0000ff; ">&lt;</span> <span style="color:#800000; ">2</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">2</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">*</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> a<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>a <span style="color:#0000ff; ">%</span> i <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> n<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> m<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> m<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">int</span> nrPrime <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#008000; ">// citim matricea si facem adunarea deodata</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+            <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+            <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>i <span style="color:#0000ff; ">%</span> <span style="color:#800000; ">2</span> <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> <span style="color:#800000; ">0</span> <span style="color:#0000ff; font-weight:bold; ">and</span> prim<span style="color:#0000ff; ">(</span>A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">)</span> nrPrime<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">;</span>
+            <span style="color:#008000; ">// daca este prim si se afla pe o linie cu indice par, nrPrime = nrPrime + 1</span>
+        <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> nrPrime<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+<!-- ------------------------------------------------------------------------------ -->
+      <p>Problema #770 <a href="https://www.pbinfo.ro/probleme/770/permcol" target="_blank">PermCol</a></p>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> n<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> m<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> m<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#008000; ">// citirea matricei</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span> <span style="color:#008000; ">// mergem pe fiecare linie</span>
+        <span style="color:#0000ff; font-weight:bold; ">int</span> aux <span style="color:#0000ff; ">=</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// pastram valoarea primului element de pe fiecare linie</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#008000; ">// mutam totul la dreapta</span>
+            A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">=</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j <span style="color:#0000ff; ">+</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+        A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>m<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">=</span> aux<span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// prima valoare o punem la final</span>
+    <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#008000; ">// afisarea matricei</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#000080; ">' '</span><span style="color:#0000ff; ">;</span>
+        <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#0000ff; font-weight:bold; ">endl</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// rand nou dupa fiecare linie</span>
+    <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+<!-- ------------------------------------------------------------------------------ -->
+      <p>Problema #771 <a href="https://www.pbinfo.ro/probleme/771/ordlin" target="_blank">OrdLin</a></p>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include</span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> n<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> m<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> m<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">int</span> a<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> b<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">{</span>
+            <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> a<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+            <span style="color:#008000; ">// facem suma pentru fiecare linie si o tinem in b[i], adica suma elementelor de pe pozitia i</span>
+            b<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">=</span> a<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+        <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#008000; ">// verificam fiecare linie</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> i <span style="color:#0000ff; ">+</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#008000; ">// cu fiecare linie</span>
+            <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>b<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">&gt;</span> b<span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+                <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> k <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> k <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> k<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+                    <span style="color:#008000; ">// schimbam elementele de pe linia i cu cele de pe linia j</span>
+                    <span style="color:#0000ff; font-weight:bold; ">swap</span><span style="color:#0000ff; ">(</span>a<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>k<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">,</span> a<span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>k<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span>
+                <span style="color:#0000ff; font-weight:bold; ">swap</span><span style="color:#0000ff; ">(</span>b<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">,</span> b<span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// schimbam sumele celor 2 linii intre ele</span>
+            <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#008000; ">// afisarea matricei</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> a<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#0000e6; ">"</span><span style="color:#0000e6; "> </span><span style="color:#0000e6; ">"</span><span style="color:#0000ff; ">;</span>
+        <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#0000ff; font-weight:bold; ">endl</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+<!-- ------------------------------------------------------------------------------ -->
+      <p>Problema #2807 <a href="https://www.pbinfo.ro/probleme/2807/matrice10" target="_blank">Matrice10</a></p>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span>
+<span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> n<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> m<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> m<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#008000; ">// citim matricea</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> v<span style="color:#0000ff; ">[</span><span style="color:#800000; ">52</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">52</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> v<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">int</span> min1 <span style="color:#0000ff; ">=</span> v<span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> ind1 <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#008000; ">// aflam linia celui mai mic nr de pe coloana 1</span>
+        <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>min1 <span style="color:#0000ff; ">&gt;</span> v<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">{</span>
+            min1 <span style="color:#0000ff; ">=</span> v<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+            ind1 <span style="color:#0000ff; ">=</span> i<span style="color:#0000ff; ">;</span>
+        <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">int</span> min2 <span style="color:#0000ff; ">=</span> v<span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>m<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> ind2 <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#008000; ">// aflam linia celui mai mic nr de pe coloana m</span>
+        <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>min2 <span style="color:#0000ff; ">&gt;</span> v<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>m<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">{</span>
+            min2 <span style="color:#0000ff; ">=</span> v<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>m<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+            ind2 <span style="color:#0000ff; ">=</span> i<span style="color:#0000ff; ">;</span>
+        <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">swap</span><span style="color:#0000ff; ">(</span>v<span style="color:#0000ff; ">[</span>ind1<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">,</span> v<span style="color:#0000ff; ">[</span>ind2<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>m<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// dam swap la cele doua elemente</span>
+
+    <span style="color:#008000; ">// afisam matricea</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">{</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> v<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#000080; ">' '</span><span style="color:#0000ff; ">;</span>
+        <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#000080; ">'\n'</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+<!-- ------------------------------------------------------------------------------ -->
+      <p>Problema #2825 <a href="https://www.pbinfo.ro/probleme/2825/chenar2" target="_blank">Chenar2</a></p>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include</span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span>
+<span style="color:#0000ff; ">{</span>
+    
+    <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> n<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> m<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> m<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#008000; ">// citirea matricei</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">104</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">104</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">int</span> x<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> x<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">bool</span> ok <span style="color:#0000ff; ">=</span> <span style="color:#0000ff; font-weight:bold; ">false</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#008000; ">// verificam prima coloana si ultima coloana</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">(</span>A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> x<span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">|</span><span style="color:#0000ff; ">|</span> <span style="color:#0000ff; ">(</span>A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>m<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> x<span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">)</span> ok <span style="color:#0000ff; ">=</span> <span style="color:#0000ff; font-weight:bold; ">true</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#008000; ">// verificam prima linie si ultima linie</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">(</span>A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> x<span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">|</span><span style="color:#0000ff; ">|</span> <span style="color:#0000ff; ">(</span>A<span style="color:#0000ff; ">[</span>n<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> x<span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">)</span> ok <span style="color:#0000ff; ">=</span> <span style="color:#0000ff; font-weight:bold; ">true</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#008000; ">// daca am gasit macar un element egal cu x, afisam DA</span>
+    <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>ok <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> <span style="color:#0000ff; font-weight:bold; ">true</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#0000e6; ">"</span><span style="color:#0000e6; ">DA</span><span style="color:#0000e6; ">"</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">else</span> <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#0000e6; ">"</span><span style="color:#0000e6; ">NU</span><span style="color:#0000e6; ">"</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+<!-- ------------------------------------------------------------------------------ -->
+      <p>Problema #769 <a href="https://www.pbinfo.ro/probleme/769/ordcol" target="_blank">OrdCol</a></p>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#008000; ">// functie care schimba toate elementele intre ele de pe 2 coloane( k , j)</span>
+<span style="color:#0000ff; font-weight:bold; ">void</span> mutare<span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> a<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">,</span> <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">,</span> <span style="color:#0000ff; font-weight:bold; ">int</span> k<span style="color:#0000ff; ">,</span> <span style="color:#0000ff; font-weight:bold; ">int</span> j<span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">swap</span><span style="color:#0000ff; ">(</span>a<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>k<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">,</span> a<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> n<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> m<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> m<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#008000; ">// citirea matricei</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span> m<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> i <span style="color:#0000ff; ">+</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+            <span style="color:#008000; ">// daca nu sunt ordonate corect elementele de linia 1 vor schimba coloanele intre ele</span>
+            <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">&gt;</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">1</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">)</span> mutare<span style="color:#0000ff; ">(</span>A<span style="color:#0000ff; ">,</span> n<span style="color:#0000ff; ">,</span> i<span style="color:#0000ff; ">,</span> j<span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#008000; ">// afisarea matricei</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#000080; ">' '</span><span style="color:#0000ff; ">;</span>
+        <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#000080; ">'\n'</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; ">}</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+<!-- ------------------------------------------------------------------------------ -->
+      <p>Problema #751 <a href="https://www.pbinfo.ro/probleme/751/mcautare" target="_blank">MCautare</a></p>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> n<span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> m<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> m<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#008000; ">// citim matricea</span>
+    <span style="color:#0000ff; font-weight:bold; ">int</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">101</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">int</span> k<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> k<span style="color:#0000ff; ">;</span>
+
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> k<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+        <span style="color:#0000ff; font-weight:bold; ">int</span> l<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> l<span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// l este numarul pe care trebuie sa-l verificam daca exista in matrice</span>
+        <span style="color:#0000ff; font-weight:bold; ">int</span> ok <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span>
+
+        <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> d <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> d <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n <span style="color:#0000ff; font-weight:bold; ">and</span> ok <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> d<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span>
+            ok <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+            <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+                <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>l <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> A<span style="color:#0000ff; ">[</span>d<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">)</span> ok <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// daca exista ok = 1</span>
+        <span style="color:#0000ff; ">}</span>
+
+        <span style="color:#0000ff; font-weight:bold; ">if</span> <span style="color:#0000ff; ">(</span>ok <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#0000e6; ">"</span><span style="color:#0000e6; ">DA</span><span style="color:#0000e6; ">\n</span><span style="color:#0000e6; ">"</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// daca exista afiseaza DA</span>
+        <span style="color:#0000ff; font-weight:bold; ">else</span> <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#0000e6; ">"</span><span style="color:#0000e6; ">NU</span><span style="color:#0000e6; ">\n</span><span style="color:#0000e6; ">"</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; ">}</span>
+    <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+<!-- ------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------ -->
+      <p>Problema #206 <a href="https://www.pbinfo.ro/probleme/206/genmat1" target="_blank">GenMat1</a></p>
+      <div class="cod">
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#0000e6; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#0000e6; ">&gt;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">using</span> <span style="color:#0000ff; font-weight:bold; ">namespace</span> std<span style="color:#0000ff; ">;</span>
+
+<span style="color:#0000ff; font-weight:bold; ">int</span> <span style="color:#0000ff; font-weight:bold; ">main</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span>
+<span style="color:#0000ff; ">{</span>
+  <span style="color:#0000ff; font-weight:bold; ">int</span> A<span style="color:#0000ff; ">[</span><span style="color:#800000; ">21</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span><span style="color:#800000; ">21</span><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">int</span> n<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> n<span style="color:#0000ff; ">;</span>
+  <span style="color:#0000ff; font-weight:bold; ">int</span> m<span style="color:#0000ff; ">;</span> <span style="color:#0000ff; font-weight:bold; ">cin</span> <span style="color:#0000ff; ">&gt;</span><span style="color:#0000ff; ">&gt;</span> m<span style="color:#0000ff; ">;</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#008000; ">// parcurgem matricea</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span>
+      A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">=</span> <span style="color:#0000ff; font-weight:bold; ">min</span><span style="color:#0000ff; ">(</span>i<span style="color:#0000ff; ">,</span> j<span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// A[i][j] va lua valoarea minima dintre i si j</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> i <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> i <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> n<span style="color:#0000ff; ">;</span> i<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span> <span style="color:#008000; ">// afisam matricea</span>
+    <span style="color:#0000ff; font-weight:bold; ">for</span> <span style="color:#0000ff; ">(</span><span style="color:#0000ff; font-weight:bold; ">int</span> j <span style="color:#0000ff; ">=</span> <span style="color:#800000; ">1</span><span style="color:#0000ff; ">;</span> j <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">=</span> m<span style="color:#0000ff; ">;</span> j<span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">+</span><span style="color:#0000ff; ">)</span> <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> A<span style="color:#0000ff; ">[</span>i<span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">[</span>j<span style="color:#0000ff; ">]</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#000080; ">' '</span><span style="color:#0000ff; ">;</span>
+    <span style="color:#0000ff; font-weight:bold; ">cout</span> <span style="color:#0000ff; ">&lt;</span><span style="color:#0000ff; ">&lt;</span> <span style="color:#000080; ">'\n'</span><span style="color:#0000ff; ">;</span>
+  <span style="color:#0000ff; ">}</span>
+
+  <span style="color:#0000ff; font-weight:bold; ">return</span> <span style="color:#800000; ">0</span><span style="color:#0000ff; ">;</span>
+<span style="color:#0000ff; ">}</span>
+</pre></div>
+      <!-- END -->
+    </div>
+  </body>
+<!-- --------------------------------- -->
+</html>
